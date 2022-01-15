@@ -1,0 +1,155 @@
+/* General Layout*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/*Desktop Banner*/
+.banner {
+  background-color: gainsboro;
+  height: 50px;
+}
+
+.banner nav {
+  height: 100%;
+}
+
+.banner .dropdown-list {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.banner .dropdown-menu {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid rgb(172, 172, 172);
+  position: relative;
+}
+
+.banner .dropdown-menu:last-child {
+  border-right: 0;
+}
+
+.banner .dropdown-menu > button {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: 0;
+
+  text-transform: uppercase;
+}
+
+.banner .dropdown-items {
+  visibility: hidden;
+  position: absolute;
+
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(128,128,128,.95);
+  height: 0;
+}
+
+.banner .dropdown-items a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.banner .dropdown-menu > button:hover, 
+.banner .dropdown-menu > button:focus {
+  background-color: rgb(109, 218, 66);
+}
+
+.banner .dropdown-menu > button:focus + .dropdown-items,
+.banner .dropdown-menu > button:hover + .dropdown-items,
+.banner .dropdown-items:hover {
+  visibility: initial;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  transition: ease-in-out 200ms;
+}
+
+.banner .dropdown-items:hover + .button {
+  background-color: rgb(109, 218, 66);
+}
+
+
+/*Mobile Banner*/
+.mobile-banner {
+  width: 100%;
+  margin: 0;
+}
+
+.mobile-banner .dropdown-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.mobile-banner .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.mobile-banner .dropdown-menu button {
+  text-transform: uppercase;
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(128,128,128,.95);
+}
+
+.mobile-banner .dropdown-items {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+}
+
+.mobile-banner .dropdown-items a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.mobile-banner .dropdown-menu button:focus + .dropdown-items,
+.mobile-banner .dropdown-menu .dropdown-items:hover{
+  display: flex;
+  transition: ease-in-out 1000ms;
+  margin: 0;
+  background-color: rgba(128,128,128,.95);
+  transition: ease-in-out 250ms;
+  height: 100%;
+  padding: .5%;
+}
+
+.mobile-banner .dropdown-menu > button:hover, 
+.mobile-banner .dropdown-menu > button:focus {
+  background-color: rgb(109, 218, 66);
+}
