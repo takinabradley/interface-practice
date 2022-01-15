@@ -60,7 +60,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  background-color: rgba(128,128,128,.95);
+  background-color: rgba(128, 128, 128, 0.95);
   height: 0;
 }
 
@@ -70,7 +70,7 @@ body {
   text-decoration: none;
 }
 
-.banner .dropdown-menu > button:hover, 
+.banner .dropdown-menu > button:hover,
 .banner .dropdown-menu > button:focus {
   background-color: rgb(109, 218, 66);
 }
@@ -88,7 +88,6 @@ body {
 .banner .dropdown-items:hover + .button {
   background-color: rgb(109, 218, 66);
 }
-
 
 /*Mobile Banner*/
 .mobile-banner {
@@ -117,7 +116,7 @@ body {
   margin: 0;
   width: 100%;
   border: none;
-  border-bottom: 1px solid rgba(128,128,128,.95);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.95);
 }
 
 .mobile-banner .dropdown-items {
@@ -139,17 +138,64 @@ body {
 }
 
 .mobile-banner .dropdown-menu button:focus + .dropdown-items,
-.mobile-banner .dropdown-menu .dropdown-items:hover{
+.mobile-banner .dropdown-menu .dropdown-items:hover {
   display: flex;
   transition: ease-in-out 1000ms;
   margin: 0;
-  background-color: rgba(128,128,128,.95);
+  background-color: rgba(128, 128, 128, 0.95);
   transition: ease-in-out 250ms;
   height: 100%;
-  padding: .5%;
+  padding: 0.5%;
 }
 
-.mobile-banner .dropdown-menu > button:hover, 
+.mobile-banner .dropdown-menu > button:hover,
 .mobile-banner .dropdown-menu > button:focus {
   background-color: rgb(109, 218, 66);
+}
+
+/*Carousel*/
+.carousel-frame {
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-images {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-images img {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.carousel-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+
+.carousel-buttons button {
+  background: none;
+  border: none;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.7);
+  width: fit-content;
+  min-width: 5%;
+  font-weight: bold;
+  font-size: 18px;
+  height: 30px;
+}
+
+.carousel-buttons button:hover {
+  background-color: rgb(109, 218, 66);
+  transition: ease-in-out 100ms;
 }
