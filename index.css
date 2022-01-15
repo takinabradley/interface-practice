@@ -157,7 +157,7 @@ body {
 .carousel-frame {
   width: 100%;
   overflow: hidden;
-
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,7 +172,14 @@ body {
 
 .carousel-images img {
   flex: 1 0 auto;
+  width: 0;
+  max-height: 90vh;
+  transition: ease-in-out 500ms;
+}
+
+.carousel-images .active {
   width: 100%;
+  transition: ease-in-out 100ms;
 }
 
 .carousel-buttons {
@@ -197,5 +204,5 @@ body {
 
 .carousel-buttons button:hover {
   background-color: rgb(109, 218, 66);
-  transition: ease-in-out 100ms;
+  transition: ease-in-out 150ms;
 }
