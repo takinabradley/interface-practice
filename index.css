@@ -206,3 +206,8 @@ body {
   background-color: rgb(109, 218, 66);
   transition: ease-in-out 150ms;
 }
+
+.carousel-indicators .active {
+  background-color: rgb(109, 218, 66);
+  transition: ease-in-out 300ms;
+}
